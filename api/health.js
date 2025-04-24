@@ -1,4 +1,4 @@
-module.exports = async (req, res) => {
+export default async (req, res) => {
   console.log('Received request:', {
     method: req.method,
     headers: req.headers,

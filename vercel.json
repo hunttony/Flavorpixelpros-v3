@@ -23,7 +23,7 @@
     {
       "src": "/api/contact",
       "dest": "/api/contact.js",
-      "methods": ["POST"]
+      "methods": ["POST", "OPTIONS"]
     },
     {
       "src": "/api/health",
