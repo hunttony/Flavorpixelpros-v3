@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
     if (conn) return conn;
 
     try {
-      conn = await mongoose.connect(process.env.MONGODB_URI, {});
+      conn = await mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI, {});
       console.log('Connected to MongoDB');
       return conn;
     } catch (err) {
