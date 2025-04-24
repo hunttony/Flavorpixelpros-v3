@@ -23,18 +23,14 @@
     {
       "src": "/api/contact",
       "dest": "/api/contact.js",
-      "methods": ["POST", "OPTIONS"]
+      "methods": ["POST"]
     },
     {
       "src": "/api/health",
       "dest": "/api/health.js",
       "methods": ["GET", "OPTIONS"]
-    },
-    {
-      "src": "/contact",
-      "dest": "/api/contact.js",
-      "methods": ["POST", "OPTIONS"]
     }
+    
   ],
   "env": {
     "NODE_ENV": "production"
