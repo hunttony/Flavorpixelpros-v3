@@ -1,4 +1,4 @@
-fetch('https://flavorpixelpros-v3-due7tn38m-hunttonys-projects.vercel.app/api/contact', {
+fetch('/api/contact', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
