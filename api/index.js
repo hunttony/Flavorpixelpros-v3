@@ -1,14 +1,12 @@
-fetch('/api/contact', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    name: 'John Doe',
-    email: 'john@example.com',
-    message: 'Hello!',
-  }),
-})
-  .then((res) => res.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.error(err));
+module.exports = async (req, res) => {
+     
+    if (req.method === 'OPTIONS') {
+      return res.status(200).end();
+    }
+  
+    if (req.method === 'GET') {
+      return res.status(200).json({ message: 'Welcome to the Contact Form API' });
+    }
+  
+    return res.status(405).json({ error: 'Method not allowed' });
+  };
