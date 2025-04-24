@@ -26,8 +26,8 @@
   "routes": [
     {
       "src": "/api",
-      "dest": "/api/index.js",
-      "methods": ["GET", "OPTIONS"]
+      "dest": "/api/index.js"
+      
     },
     {
       "src": "/api/contact",
@@ -36,8 +36,8 @@
     },
     {
       "src": "/api/health",
-      "dest": "/api/health.js",
-      "methods": ["GET", "OPTIONS"]
+      "dest": "/api/health.js"
+      
     }
     
   ],
