@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "framework": null,
+    
 
     "builds": [
       {
@@ -15,9 +15,7 @@
         }
       }
     ],
-    "routes": [
-     
-        
+    "routes": [       
         {
           "src": "/api",
           "dest": "/api/index.js",
@@ -37,15 +35,10 @@
           "src": "/contact",
           "dest": "/api/contact.js",
           "methods": ["POST", "OPTIONS"],
-          "status": 308,
-          "headers": {
-            "Location": "/api/contact"
-          }
-        }
+          
+          } 
       
     ],
-
-    
 
     "env": {
       "NODE_ENV": "production"
