@@ -17,8 +17,57 @@
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/", "dest": "/api/index.js" }
+    { "src": "/", "dest": "/api/index.js" },
+    
+        {
+          "src": "/api",
+          "dest": "/api/index.js",
+          "methods": ["GET", "OPTIONS"]
+        },
+        {
+          "src": "/api/contact",
+          "dest": "/api/contact.js",
+          "methods": ["POST", "OPTIONS"]
+        },
+        {
+          "src": "/api/health",
+          "dest": "/api/health.js",
+          "methods": ["GET", "OPTIONS"]
+        },
+        {
+          "src": "/contact",
+          "dest": "/api/contact.js",
+          "methods": ["POST", "OPTIONS"],
+          "status": 308,
+          "headers": {
+            "Location": "/api/contact"
+          }
+        }
+      
     ],
+
+    "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Origin, X-Requested-With, Accept"
+        }
+      ]
+    }
+],
+
+
+
     "env": {
       "NODE_ENV": "production"
     }
